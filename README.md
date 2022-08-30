@@ -1,3 +1,11 @@
+# svelte-experiments
+
+Learning Svelte for data vis!
+
+On the tooling side, I've set this up using SvelteKit. Although it's a static website thanks to `adapter-static`, it uses Client Side Routing (ie. when you click one of the experiment links, SvelteKit is intercepting the click and rendering the next page, rather than going and getting a new page from the server). For data vis applications I'd certainly prefer a simple file-based routing system, but it looks difficult to set this up - and I don't think there's any massive loss in performance (although I'll monitor this as I build more ambitious stuff).
+
+In SvelteKit, routes are defined by folders, and page components are named `+page.svelte`. So if the site is deployed to `example.com`, visiting `example.com/1-animated-circles` renders `/src/routes/1-animated-circles/+page.svelte` (and any child components that page uses).
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
